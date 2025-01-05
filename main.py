@@ -1,5 +1,5 @@
 import pygame,sys,random
-from pygame.math import  Vector2 
+from pygame.math import  Vector2 # teraz juz wiem dlaczego mozena pisac 
 
 class FRUIT:
   def __init__(self):
@@ -10,14 +10,14 @@ class FRUIT:
     #draw a sqaure
   def draw_fruit(self):
     #draw rectangle
-    fruit_rect = pygame.Rect(self.x*cell_size,self.y*ce
-    pygame.draw.rect(screen,(126,166,114),fruit_rect) #
+    fruit_rect = pygame.Rect(self.x*cell_size,self.y*cell_size,cell_size,cell_size)
+    pygame.draw.rect(screen,(126,166,114),fruit_rect) # screen ,color and rect
     
 
 pygame.init()
 cell_size = 40
 cell_number = 20
-screen = pygame.display.set_mode((cell_number*cell_size
+screen = pygame.display.set_mode((cell_number*cell_size,cell_number*cell_size))
 clock = pygame.time.Clock()
 
 
